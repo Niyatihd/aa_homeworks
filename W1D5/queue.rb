@@ -1,21 +1,26 @@
 class Queue #FIFO
   attr_reader :queue
-
+  
   def initialize(queue=[])
     @queue = queue
   end
-
+  
   def enqueue(el)
     queue.unshift(el)
   end
-
+  
   def dequeue
     queue - [queue.pop]
   end
-
+  
   def peek
     queue.last
   end
+  
+  # private
+  
+  # attr_reader :queue
+
 end
 
 if __FILE__ == $PROGRAM_NAME
