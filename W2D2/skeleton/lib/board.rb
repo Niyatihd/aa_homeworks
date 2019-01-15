@@ -38,20 +38,8 @@ class Board
       end
       
       ending_cup_idx = (ending_cup_idx + 1) % cups.length unless stones.empty?
-      # stones.pop
+      # stones.pop will not work as it will pop the stone @ idx 13 and 6 too which we do not want
     end
-    # ending_cup_idx = start_pos
-    # until stones.empty?
-    #   ending_cup_idx = (ending_cup_idx + 1) % cups.length
-
-    #   if current_player_name == name1
-    #     @cups[ending_cup_idx] += [stones.pop] unless ending_cup_idx == 13
-    #   else
-    #     @cups[ending_cup_idx] += [stones.pop] unless ending_cup_idx == 6
-    #   end
-
-    #   # stones.pop
-    # end
 
     render
     next_turn(ending_cup_idx)
